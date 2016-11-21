@@ -1,2 +1,5 @@
 def arabic_to_roman(arabic):
-    raise RuntimeError("Arabic number must be positive and less than 4000")
+    if arabic == 1:
+        return "I"
+    else:
+        raise RuntimeError("Arabic number must be positive and less than 4000")
