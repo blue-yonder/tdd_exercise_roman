@@ -14,9 +14,8 @@ def _digit_to_roman(digit, one_symbol, five_symbol, ten_symbol):
 
 def arabic_to_roman(arabic):
     if arabic > 0 and arabic < 4000:
-        if arabic < 10:
-            return _digit_to_roman(arabic, "I", "V", "X")
-        else:
-            return _digit_to_roman(arabic / 10, "X", "L", "C")
+        roman = _digit_to_roman(arabic / 10, "X", "L", "C")
+        roman += _digit_to_roman(arabic % 10, "I", "V", "X")
+        return roman
     else:
         raise RuntimeError("Arabic number must be positive and less than 4000")
