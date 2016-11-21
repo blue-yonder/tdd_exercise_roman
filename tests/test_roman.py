@@ -24,8 +24,9 @@ def test_inconvertible_numbers():
         with pytest.raises(RuntimeError):
             arabic_to_roman(-1)
 
-def test_one():
-    assert "I" == arabic_to_roman(1)
-
-def test_two():
-    assert "II" == arabic_to_roman(2)
+def test_ones():
+    ones = {1: "I",
+            2: "II",
+            3: "III"}
+    for arabic, expected_roman in ones.items():
+        assert arabic_to_roman(arabic) == expected_roman
