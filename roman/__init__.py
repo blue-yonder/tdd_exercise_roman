@@ -4,6 +4,8 @@ def arabic_to_roman(arabic):
             return "IV"
         elif arabic == 5:
             return "V"
+        elif arabic == 6:
+            return "VI"
         else:
             return "I" * arabic
     else:
