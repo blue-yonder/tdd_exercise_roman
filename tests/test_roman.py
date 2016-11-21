@@ -1,5 +1,7 @@
 from roman import arabic_to_roman
 
+import pytest
+
 """
 Use this file to test-drive the implementation of an `arabic_to_roman()`
 function. Repeat the following steps until you have solved the task:
@@ -15,3 +17,7 @@ production code could be to create a simple stub that does nothing at all.
 Execute the tests with `python setup.py test`. This test file will fail
 when it is freshly checked out.
 """
+
+def test_negative_number_raises():
+    with pytest.raises(RuntimeError):
+        arabic_to_roman(-1)
