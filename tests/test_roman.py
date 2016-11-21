@@ -27,6 +27,7 @@ def test_inconvertible_numbers():
 def test_ones():
     ones = {1: "I",
             2: "II",
-            3: "III"}
+            3: "III",
+            4: "IV"}
     for arabic, expected_roman in ones.items():
         assert arabic_to_roman(arabic) == expected_roman
