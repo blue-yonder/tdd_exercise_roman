@@ -2,6 +2,8 @@ def arabic_to_roman(arabic):
     if arabic > 0 and arabic < 4000:
         if arabic == 4:
             return "IV"
+        elif arabic == 5:
+            return "V"
         else:
             return "I" * arabic
     else:
