@@ -51,3 +51,7 @@ def test_tens():
             90: "XC"}
     for arabic, expected_roman in tens.items():
         assert arabic_to_roman(arabic) == expected_roman
+
+
+def test_two_digit_combination():
+    assert arabic_to_roman(42) == "XLII"
