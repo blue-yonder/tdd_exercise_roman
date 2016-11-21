@@ -43,6 +43,11 @@ def test_tens():
     tens = {10: "X",
             20: "XX",
             30: "XXX",
-            40: "XL"}
+            40: "XL",
+            50: "L",
+            60: "LX",
+            70: "LXX",
+            80: "LXXX",
+            90: "XC"}
     for arabic, expected_roman in tens.items():
         assert arabic_to_roman(arabic) == expected_roman
