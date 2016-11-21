@@ -12,11 +12,15 @@ def _ones_to_roman(ones):
         return roman + "I" * ones
 
 
+def _tens_to_roman(tens):
+    return "X" * tens
+
+
 def arabic_to_roman(arabic):
     if arabic > 0 and arabic < 4000:
         if arabic < 10:
             return _ones_to_roman(arabic)
         else:
-            return "X"
+            return _tens_to_roman(arabic / 10)
     else:
         raise RuntimeError("Arabic number must be positive and less than 4000")
