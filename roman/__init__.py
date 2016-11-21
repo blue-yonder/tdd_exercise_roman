@@ -13,7 +13,18 @@ def _ones_to_roman(ones):
 
 
 def _tens_to_roman(tens):
-    return "X" * tens
+    if tens == 4:
+        return "XL"
+    # elif tens == 9:
+    #     return "IX"
+    else:
+        # if tens >= 5:
+        #     roman = "V"
+        #     tens -= 5
+        # else:
+        #     roman = ""
+        roman = ""
+        return roman + "X" * tens
 
 
 def arabic_to_roman(arabic):
