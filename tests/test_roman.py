@@ -18,17 +18,11 @@ Execute the tests with `python setup.py test`. This test file will fail
 when it is freshly checked out.
 """
 
-def test_negative_number_raises():
-    with pytest.raises(RuntimeError):
-        arabic_to_roman(-1)
-
-def test_zero_raises():
-    with pytest.raises(RuntimeError):
-        arabic_to_roman(0)
-
-def test_four_thousand_raises():
-    with pytest.raises(RuntimeError):
-        arabic_to_roman(4000)
+def test_inconvertible_numbers():
+    inconvertibles = [-1, 0, 4000]
+    for number in inconvertibles:
+        with pytest.raises(RuntimeError):
+            arabic_to_roman(-1)
 
 def test_one():
     assert "I" == arabic_to_roman(1)
