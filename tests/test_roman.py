@@ -30,6 +30,8 @@ def test_ones():
             3: "III",
             4: "IV",
             5: "V",
-            6: "VI"}
+            6: "VI",
+            7: "VII",
+            8: "VIII"}
     for arabic, expected_roman in ones.items():
         assert arabic_to_roman(arabic) == expected_roman
