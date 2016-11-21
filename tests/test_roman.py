@@ -24,3 +24,6 @@ def test_negative_number_raises():
 
 def test_one():
     assert "I" == arabic_to_roman(1)
+
+def test_two():
+    assert "II" == arabic_to_roman(2)
