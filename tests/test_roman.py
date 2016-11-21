@@ -22,6 +22,10 @@ def test_negative_number_raises():
     with pytest.raises(RuntimeError):
         arabic_to_roman(-1)
 
+def test_zero_raises():
+    with pytest.raises(RuntimeError):
+        arabic_to_roman(0)
+
 def test_one():
     assert "I" == arabic_to_roman(1)
 
