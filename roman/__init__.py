@@ -15,15 +15,14 @@ def _ones_to_roman(ones):
 def _tens_to_roman(tens):
     if tens == 4:
         return "XL"
-    # elif tens == 9:
-    #     return "IX"
+    elif tens == 9:
+        return "XC"
     else:
-        # if tens >= 5:
-        #     roman = "V"
-        #     tens -= 5
-        # else:
-        #     roman = ""
-        roman = ""
+        if tens >= 5:
+            roman = "L"
+            tens -= 5
+        else:
+            roman = ""
         return roman + "X" * tens
 
 
