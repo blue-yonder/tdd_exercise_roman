@@ -1,8 +1,10 @@
-# An exercise in test-driven development (TDD)
+# An exercise in test-driven development
 
-This repository accompanies the workshop
-[Test-Driven Development: How, When, Why?](http://www.xpdays.de/2016/sessions/097-test-driven-development-wann-wie-wieso.html)
-held at the [XPDays Germany 2016](http://www.xpdays.de/2016/) conference.
+Test-driven development is a software development process that
+basically puts writing a failing unit test before modifying your
+production code. This repository provides scaffolds for various
+programming languages for hassle-free first steps in the world
+of TDD by solving a simple task.
 
 # The task
 
@@ -30,8 +32,21 @@ You can combine the numbers listed above, ordering larger to smaller
 numbers left to right. Here are a few examples:
 
 *   407 = CDVII
-*   2016 = MMXVI
+*   2017 = MMXVII
 *   3888 = MMMDCCCLXXXVIII
+
+
+# Quickstart with C++
+
+Follow the instructions in the `README.md` file in the `cpp` branch:
+
+```
+> git clone https://github.com/blue-yonder/tdd_exercise.git
+> git checkout cpp
+> cat README.md
+```
+
+
 
 # Quickstart with Python
 
