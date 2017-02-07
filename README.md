@@ -36,25 +36,22 @@ numbers left to right. Here are a few examples:
 *   3888 = MMMDCCCLXXXVIII
 
 
-# Quickstart with C++
-
-Follow the instructions in the `README.md` file in the `cpp` branch:
-
-```
-> git clone https://github.com/blue-yonder/tdd_exercise_roman.git
-> cd tdd_exercise
-> git checkout cpp
-> cat README.md
-```
-
-
 # Quickstart with Python
-
-Follow the instructions in the `README.md` file in the `python` branch:
+  
+If you would like to work on this task using the Python programming
+language, you can use the following commands to get started quickly.
+Since this may install a few `py.test` framework components, it is
+recommended to execute these commands in a virtual environment.
 
 ```
 > git clone https://github.com/blue-yonder/tdd_exercise_roman.git
 > cd tdd_exercise
 > git checkout python
-> cat README.md
+# You may need to execute the following command twice (sorry)
+> python setup.py test
 ```
+ 
+The `roman` directory is supposed to hold your production code while the
+`tests` directory holds the tests. The repository contains a very basic
+test file. Running the tests will fail. This constitutes the first step
+of your test-driven development cycle. The rest is up to you ;-).
