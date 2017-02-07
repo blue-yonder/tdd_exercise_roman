@@ -38,23 +38,34 @@ numbers left to right. Here are a few examples:
 
 # Quickstart with C++
 
-Follow the instructions in the `README.md` file in the `cpp` branch:
+If you would like to work on this task using the C++ programming language,
+you can use the following commands to get started quickly.
+This procedure assumes your system provides a C++ compiler and the `cmake`
+build tool. The build system will automatically download the 
+[googletest](https://github.com/google/googletest) unit test framework.
+
+Execute the following commands to setup your environment:
 
 ```
 > git clone https://github.com/blue-yonder/tdd_exercise_roman.git
-> cd tdd_exercise
+> cd tdd_exercise_roman
 > git checkout cpp
-> cat README.md
+> cmake
 ```
 
+The header file `roman/roman/roman.h` is supposed to hold any public
+declarations you require. The source file `roman/src/roman.cpp` is supposed
+to hold your implementation. Finally, drive your implementation by adding
+tests to the `tests/test_roman.cpp` file.
 
-# Quickstart with Python
-
-Follow the instructions in the `README.md` file in the `python` branch:
+To compile your code and execute the unit tests, use the following commands:
 
 ```
-> git clone https://github.com/blue-yonder/tdd_exercise_roman.git
-> cd tdd_exercise
-> git checkout python
-> cat README.md
+> make && ctest --verbose
 ```
+
+Running this command for the first time will present you with a _failing_ unit
+test. The unit test does not do anything meaningful, it is just there to
+illustrate how writing tests with googletest works (see
+[here](https://github.com/google/googletest/blob/master/googletest/docs/Primer.md#basic-assertions) 
+for more information on googletest).
