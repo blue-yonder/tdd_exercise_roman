@@ -8,14 +8,13 @@ TEST(ArabicToRomanTest, ZeroThrowsDomainError) {
     EXPECT_THROW(arabic_to_roman(0), std::domain_error);
 }
 
-TEST(ArabicToRomanTest, One) {
-    EXPECT_EQ(arabic_to_roman(1), "I");
-}
-
-TEST(ArabicToRomanTest, Two) {
-    EXPECT_EQ(arabic_to_roman(2), "II");
-}
-
-TEST(ArabicToRomanTest, Three) {
-    EXPECT_EQ(arabic_to_roman(3), "III");
+TEST(ArabicToRomanTest, Ones) {
+    std::vector<std::pair<int, std::string>> const pairs = {
+        {1, "I"},
+        {2, "II"},
+        {3, "III"}
+    };
+    for (auto const & p : pairs) {
+        EXPECT_EQ(arabic_to_roman(p.first), p.second);
+    }
 }
