@@ -3,12 +3,12 @@
 
 std::string arabic_to_roman(int arabic)
 {
-    if (arabic == 1) {
-        return "I";
-    } if (arabic == 2) {
-        return "II";
-    } if (arabic == 3) {
-        return "III";
+    if (arabic > 0) {
+        std::string roman("");
+        for (int i = 0; i != arabic; ++i) {
+            roman += "I";
+        }
+        return roman;
     } else {
         throw std::domain_error("");
     }
