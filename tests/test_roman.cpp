@@ -15,3 +15,7 @@ TEST(ArabicToRomanTest, One) {
 TEST(ArabicToRomanTest, Two) {
     EXPECT_EQ(arabic_to_roman(2), "II");
 }
+
+TEST(ArabicToRomanTest, Three) {
+    EXPECT_EQ(arabic_to_roman(3), "III");
+}
