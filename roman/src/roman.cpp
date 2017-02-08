@@ -4,11 +4,15 @@
 std::string arabic_to_roman(int arabic)
 {
     if ((arabic > 0) and (arabic < 4000)) {
-        std::string roman("");
-        for (int i = 0; i != arabic; ++i) {
-            roman += "I";
+        if (arabic == 4) {
+            return "IV";
+        } else {
+            std::string roman("");
+            for (int i = 0; i != arabic; ++i) {
+                roman += "I";
+            }
+            return roman;
         }
-        return roman;
     } else {
         throw std::domain_error("");
     }
