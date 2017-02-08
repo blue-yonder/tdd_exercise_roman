@@ -16,7 +16,8 @@ TEST(ArabicToRomanTest, Ones) {
     std::vector<std::pair<int, std::string>> const pairs = {
         {1, "I"},
         {2, "II"},
-        {3, "III"}
+        {3, "III"},
+        {4, "IV"}
     };
     for (auto const & p : pairs) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
