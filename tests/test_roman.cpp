@@ -11,3 +11,7 @@ TEST(ArabicToRomanTest, ZeroThrowsDomainError) {
 TEST(ArabicToRomanTest, One) {
     EXPECT_EQ(arabic_to_roman(1), "I");
 }
+
+TEST(ArabicToRomanTest, Two) {
+    EXPECT_EQ(arabic_to_roman(2), "II");
+}
