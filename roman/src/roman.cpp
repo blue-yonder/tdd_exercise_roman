@@ -5,6 +5,8 @@ std::string arabic_to_roman(int arabic)
 {
     if (arabic == 1) {
         return "I";
+    } if (arabic == 2) {
+        return "II";
     } else {
         throw std::domain_error("");
     }
