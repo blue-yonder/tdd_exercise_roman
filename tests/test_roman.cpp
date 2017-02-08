@@ -70,3 +70,14 @@ TEST(ArabicToRomanTest, Hundreds) {
 TEST(ArabicToRomanTest, HundredsAndTensAndOnes) {
     EXPECT_EQ(arabic_to_roman(999), "CMXCIX");
 }
+
+TEST(ArabicToRomanTest, Thousands) {
+    std::vector<std::pair<int, std::string>> const pairs = {
+        {1000, "M"},
+        {2000, "MM"},
+        {3000, "MMM"}
+    };
+    for (auto const & p : pairs) {
+        EXPECT_EQ(arabic_to_roman(p.first), p.second);
+    }
+}
