@@ -3,5 +3,9 @@
 
 std::string arabic_to_roman(int arabic)
 {
-    throw std::domain_error("");
+    if (arabic == 1) {
+        return "I";
+    } else {
+        throw std::domain_error("");
+    }
 }
