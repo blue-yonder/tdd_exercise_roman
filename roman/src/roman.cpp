@@ -40,7 +40,8 @@ std::string arabic_to_roman(int arabic)
 {
     if (is_convertible(arabic)) {
         std::ostringstream roman;
-        digit_to_roman(roman, arabic / 100, "C", "D", "M");
+        digit_to_roman(roman, arabic / 1000, "M", "-", "-");
+        digit_to_roman(roman, (arabic % 1000) / 100, "C", "D", "M");
         digit_to_roman(roman, (arabic % 100) / 10, "X", "L", "C");
         digit_to_roman(roman, arabic % 10, "I", "V", "X");
         return roman.str();
