@@ -21,7 +21,8 @@ TEST(ArabicToRomanTest, Ones) {
         {5, "V"},
         {6, "VI"},
         {7, "VII"},
-        {8, "VIII"}
+        {8, "VIII"},
+        {9, "IX"}
     };
     for (auto const & p : pairs) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
