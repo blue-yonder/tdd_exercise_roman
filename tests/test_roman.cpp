@@ -49,3 +49,20 @@ TEST(ArabicToRomanTest, Tens) {
 TEST(ArabicToRomanTest, TensAndOnes) {
     EXPECT_EQ(arabic_to_roman(99), "XCIX");
 }
+
+TEST(ArabicToRomanTest, Hundreds) {
+    std::vector<std::pair<int, std::string>> const pairs = {
+        {100, "C"},
+        {200, "CC"},
+        {300, "CCC"},
+        {400, "CD"},
+        {500, "D"},
+        {600, "DC"},
+        {700, "DCC"},
+        {800, "DCCC"},
+        {900, "CM"},
+    };
+    for (auto const & p : pairs) {
+        EXPECT_EQ(arabic_to_roman(p.first), p.second);
+    }
+}
