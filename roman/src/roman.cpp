@@ -34,16 +34,36 @@ namespace {
         }
     }
 
+    int thousands(int x)
+    {
+        return x / 1000;
+    }
+
+    int hundreds(int x)
+    {
+        return (x % 1000) / 100;
+    }
+
+    int tens(int x)
+    {
+        return (x % 100) / 10;
+    }
+
+    int ones(int x)
+    {
+        return x % 10;
+    }
+
 }
 
 std::string arabic_to_roman(int arabic)
 {
     if (is_convertible(arabic)) {
         std::ostringstream roman;
-        digit_to_roman(roman, arabic / 1000, "M", "-", "-");
-        digit_to_roman(roman, (arabic % 1000) / 100, "C", "D", "M");
-        digit_to_roman(roman, (arabic % 100) / 10, "X", "L", "C");
-        digit_to_roman(roman, arabic % 10, "I", "V", "X");
+        digit_to_roman(roman, thousands(arabic), "M", "-", "-");
+        digit_to_roman(roman, hundreds(arabic),  "C", "D", "M");
+        digit_to_roman(roman, tens(arabic),      "X", "L", "C");
+        digit_to_roman(roman, ones(arabic),      "I", "V", "X");
         return roman.str();
     } else {
         throw std::domain_error("Can only convert arabic numbers in the range [1, 3999]");
