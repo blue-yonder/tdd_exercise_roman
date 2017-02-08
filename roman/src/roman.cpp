@@ -4,6 +4,10 @@
 std::string arabic_to_roman(int arabic)
 {
     if ((arabic > 0) and (arabic < 4000)) {
+        if (arabic == 9) {
+            return "IX";
+        }
+
         if (arabic == 4) {
             return "IV";
         }
