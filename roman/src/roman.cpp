@@ -9,6 +9,10 @@ namespace {
     }
 
     std::string to_roman(int arabic) {
+        if (arabic == 10) {
+            return "X";
+        }
+
         if (arabic == 9) {
             return "IX";
         }
