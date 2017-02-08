@@ -15,8 +15,9 @@ namespace {
 
         std::ostringstream roman;
 
-        if (arabic == 50) {
-            return "L";
+        if (arabic >= 50) {
+            roman << "L";
+            arabic -= 50;
         }
 
         for (int i = 0; i != arabic / 10; ++i) {
