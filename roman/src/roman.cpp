@@ -2,9 +2,17 @@
 #include <stdexcept>
 #include <sstream>
 
+namespace {
+
+    bool is_convertible(int arabic) {
+        return (arabic > 0) and (arabic < 4000);
+    }
+
+}
+
 std::string arabic_to_roman(int arabic)
 {
-    if ((arabic > 0) and (arabic < 4000)) {
+    if (is_convertible(arabic)) {
         if (arabic == 9) {
             return "IX";
         }
