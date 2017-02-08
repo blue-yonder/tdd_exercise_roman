@@ -1,5 +1,6 @@
 #include <roman/roman.h>
 #include <stdexcept>
+#include <sstream>
 
 std::string arabic_to_roman(int arabic)
 {
@@ -12,18 +13,18 @@ std::string arabic_to_roman(int arabic)
             return "IV";
         }
 
-        std::string roman("");
+        std::ostringstream roman;
 
         if (arabic >= 5) {
-            roman += "V";
+            roman << "V";
             arabic -= 5;
         }
 
         for (int i = 0; i != arabic; ++i) {
-            roman += "I";
+            roman << "I";
         }
 
-        return roman;
+        return roman.str();
     } else {
         throw std::domain_error("");
     }
