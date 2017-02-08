@@ -38,6 +38,6 @@ std::string arabic_to_roman(int arabic)
     if (is_convertible(arabic)) {
         return to_roman(arabic);
     } else {
-        throw std::domain_error("");
+        throw std::domain_error("Can only convert arabic numbers in the range [1, 3999]");
     }
 }
