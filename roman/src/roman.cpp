@@ -8,11 +8,7 @@ namespace {
         return (arabic > 0) and (arabic < 4000);
     }
 
-}
-
-std::string arabic_to_roman(int arabic)
-{
-    if (is_convertible(arabic)) {
+    std::string to_roman(int arabic) {
         if (arabic == 9) {
             return "IX";
         }
@@ -33,6 +29,14 @@ std::string arabic_to_roman(int arabic)
         }
 
         return roman.str();
+    }
+
+}
+
+std::string arabic_to_roman(int arabic)
+{
+    if (is_convertible(arabic)) {
+        return to_roman(arabic);
     } else {
         throw std::domain_error("");
     }
