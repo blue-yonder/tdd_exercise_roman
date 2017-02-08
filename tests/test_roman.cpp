@@ -8,6 +8,10 @@ TEST(ArabicToRomanTest, ZeroThrowsDomainError) {
     EXPECT_THROW(arabic_to_roman(0), std::domain_error);
 }
 
+TEST(ArabicToRomanTest, FourThousandThrowsDomainError) {
+    EXPECT_THROW(arabic_to_roman(4000), std::domain_error);
+}
+
 TEST(ArabicToRomanTest, Ones) {
     std::vector<std::pair<int, std::string>> const pairs = {
         {1, "I"},
