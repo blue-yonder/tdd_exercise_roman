@@ -40,11 +40,7 @@ namespace {
 std::string arabic_to_roman(int arabic)
 {
     if (is_convertible(arabic)) {
-        if (arabic >= 10) {
-            return digit_to_roman(arabic / 10, "X", "L", "C");
-        } else {
-            return digit_to_roman(arabic, "I", "V", "X");
-        }
+        return digit_to_roman(arabic / 10, "X", "L", "C") + digit_to_roman(arabic % 10, "I", "V", "X");
     } else {
         throw std::domain_error("Can only convert arabic numbers in the range [1, 3999]");
     }
