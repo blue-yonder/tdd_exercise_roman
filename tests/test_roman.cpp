@@ -66,3 +66,7 @@ TEST(ArabicToRomanTest, Hundreds) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
     }
 }
+
+TEST(ArabicToRomanTest, HundredsAndTensAndOnes) {
+    EXPECT_EQ(arabic_to_roman(999), "CMXCIX");
+}
