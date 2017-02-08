@@ -8,20 +8,21 @@ namespace {
         return (arabic > 0) and (arabic < 4000);
     }
 
-    std::string digit_to_roman(int digit,
-                               std::string const & one_glyph,
-                               std::string const & five_glyph,
-                               std::string const & ten_glyph)
+    void digit_to_roman(std::ostream & roman,
+                        int digit,
+                        std::string const & one_glyph,
+                        std::string const & five_glyph,
+                        std::string const & ten_glyph)
     {
         if (digit == 9) {
-            return one_glyph + ten_glyph;
+            roman << one_glyph << ten_glyph;
+            return;
         }
 
         if (digit == 4) {
-            return one_glyph + five_glyph;
+            roman << one_glyph << five_glyph;
+            return;
         }
-
-        std::ostringstream roman;
 
         if (digit >= 5) {
             roman << five_glyph;
@@ -31,8 +32,6 @@ namespace {
         for (int i = 0; i != digit; ++i) {
             roman << one_glyph;
         }
-
-        return roman.str();
     }
 
 }
@@ -40,7 +39,10 @@ namespace {
 std::string arabic_to_roman(int arabic)
 {
     if (is_convertible(arabic)) {
-        return digit_to_roman(arabic / 10, "X", "L", "C") + digit_to_roman(arabic % 10, "I", "V", "X");
+        std::ostringstream roman;
+        digit_to_roman(roman, arabic / 10, "X", "L", "C");
+        digit_to_roman(roman, arabic % 10, "I", "V", "X");
+        return roman.str();
     } else {
         throw std::domain_error("Can only convert arabic numbers in the range [1, 3999]");
     }
