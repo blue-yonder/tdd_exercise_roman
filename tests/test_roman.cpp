@@ -34,7 +34,8 @@ TEST(ArabicToRomanTest, Tens) {
         {10, "X"},
         {20, "XX"},
         {30, "XXX"},
-        {40, "XL"}
+        {40, "XL"},
+        {50, "L"}
     };
     for (auto const & p : pairs) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
