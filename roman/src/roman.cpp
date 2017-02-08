@@ -7,6 +7,8 @@ std::string arabic_to_roman(int arabic)
         return "I";
     } if (arabic == 2) {
         return "II";
+    } if (arabic == 3) {
+        return "III";
     } else {
         throw std::domain_error("");
     }
