@@ -81,3 +81,7 @@ TEST(ArabicToRomanTest, Thousands) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
     }
 }
+
+TEST(ArabicToRomanTest, Maximum) {
+    EXPECT_EQ(arabic_to_roman(3999), "MMMCMXCIX");
+}
