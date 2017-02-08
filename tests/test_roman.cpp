@@ -45,3 +45,7 @@ TEST(ArabicToRomanTest, Tens) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
     }
 }
+
+TEST(ArabicToRomanTest, TensAndOnes) {
+    EXPECT_EQ(arabic_to_roman(99), "XCIX");
+}
