@@ -33,7 +33,8 @@ TEST(ArabicToRomanTest, Tens) {
     std::vector<std::pair<int, std::string>> const pairs = {
         {10, "X"},
         {20, "XX"},
-        {30, "XXX"}
+        {30, "XXX"},
+        {40, "XL"}
     };
     for (auto const & p : pairs) {
         EXPECT_EQ(arabic_to_roman(p.first), p.second);
