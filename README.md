@@ -45,7 +45,7 @@ recommended to execute these commands in a virtual environment.
 
 ```
 > git clone https://github.com/blue-yonder/tdd_exercise_roman.git
-> cd tdd_exercise
+> cd tdd_exercise_roman
 > git checkout python
 # You may need to execute the following command twice (sorry)
 > python setup.py test
