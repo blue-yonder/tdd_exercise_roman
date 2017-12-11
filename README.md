@@ -1,4 +1,4 @@
-# An exercise in test-driven development
+# Roman numerals TDD kata
 
 Test-driven development is a software development process that
 basically puts writing a failing unit test before modifying your
@@ -41,7 +41,7 @@ numbers left to right. Here are a few examples:
 Follow the instructions in the `README.md` file in the `cpp` branch:
 
 ```
-> git clone https://github.com/blue-yonder/tdd_exercise.git
+> git clone https://github.com/blue-yonder/tdd_exercise_roman.git
 > cd tdd_exercise
 > git checkout cpp
 > cat README.md
@@ -53,7 +53,7 @@ Follow the instructions in the `README.md` file in the `cpp` branch:
 Follow the instructions in the `README.md` file in the `python` branch:
 
 ```
-> git clone https://github.com/blue-yonder/tdd_exercise.git
+> git clone https://github.com/blue-yonder/tdd_exercise_roman.git
 > cd tdd_exercise
 > git checkout python
 > cat README.md
